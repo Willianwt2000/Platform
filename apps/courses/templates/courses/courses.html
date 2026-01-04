@@ -1,9 +1,15 @@
 
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}Todos los cursos{% endblock title %}
+{% block custom_styles %}<link rel="stylesheet" href="{% static 'css/styles.css' %}" />{% endblock custom_styles %}
+{% block content %}
+    
     <div class="layout">
 
         <div class="sidebar">
             <div class="logo">
-                <img src="./images/devilearn.png" alt="Logo">
+                <img src="{% static 'images/devilearn.png' %}" alt="Logo">
             </div>
             <ul class="menu">
                 <li><a class="menu-option" href="index.html"><i
@@ -33,7 +39,7 @@
                 </div>
                 <div class="header-right">
                     <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="User" />
+                        <img src="https://motionbgs.com/media/4418/sung-jin-woo-darkness.jpg" alt="User" />
                     </div>
                 </div>
             </div>
@@ -47,7 +53,7 @@
                             <!-- Card 1 -->
                             <div class="course-card">
                                 <a href="course_detail.html">
-                                    <img src="./images/curso_1.jpg" alt="Course Image" class="course-img" />
+                                    <img src="{% static 'images/curso_1.jpg' %}" alt="Course Image" class="course-img" />
                                     <div class="course-info">
                                         <div class="course-rating">
                                             <span class="tag beginner">Beginner</span>
@@ -70,7 +76,7 @@
                             <!-- Card 2 -->
                             <div class="course-card">
                                 <a href="course_detail.html">
-                                    <img src="./images/curso_2.jpg" alt="Course Image" class="course-img" />
+                                    <img src="{% static 'images/curso_2.jpg' %}" alt="Course Image" class="course-img" />
                                     <div class="course-info">
                                         <div class="course-rating">
                                             <span class="tag beginner">Beginner</span>
@@ -92,7 +98,7 @@
                             <!-- Card 3 -->
                             <div class="course-card">
                                 <a href="course_detail.html">
-                                    <img src="./images/curso_3.jpg" alt="Course Image" class="course-img" />
+                                    <img src="{% static 'images/curso_3.jpg' %}" alt="Course Image" class="course-img" />
                                     <div class="course-info">
                                         <div class="course-rating">
                                             <span class="tag beginner">Beginner</span>
@@ -116,7 +122,7 @@
                             <!-- Card 4 -->
                             <div class="course-card">
                                 <a href="course_detail.html">
-                                    <img src="./images/curso_4.jpg" alt="Course Image" class="course-img" />
+                                    <img src="{% static 'images/curso_2.jpg' %}" alt="Course Image" class="course-img" />
                                     <div class="course-info">
                                         <div class="course-rating">
                                             <span class="tag beginner">Beginner</span>
@@ -141,4 +147,9 @@
             </main>
         </div>
     </div>
-    <script src="./js/script.js"></script>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock scripts %}
