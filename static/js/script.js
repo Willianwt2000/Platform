@@ -5,4 +5,4 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     });
 });
 
-console.log("Hola estoy cargando correctamente")
+console.log("Estoy cargando Willian")

@@ -1,155 +1,63 @@
-
-{% extends "includes/base.html" %}
+{% extends 'includes/base.html' %}
 {% load static %}
-{% block title %}Todos los cursos{% endblock title %}
-{% block custom_styles %}<link rel="stylesheet" href="{% static 'css/styles.css' %}" />{% endblock custom_styles %}
+{% block title %}
+  Todos los cursos
+{% endblock %}
+{% block custom_styles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock %}
 {% block content %}
-    
-    <div class="layout">
+  <div class="layout">
+    {% include 'includes/sidebar.html' %}
 
-        <div class="sidebar">
-            <div class="logo">
-                <img src="{% static 'images/devilearn.png' %}" alt="Logo">
-            </div>
-            <ul class="menu">
-                <li><a class="menu-option" href="index.html"><i
-                            class="fa-solid fa-house icon"></i><span>Dashboard</span></a>
-                </li>
-                <li><a class="menu-option" href="courses.html"><i
-                            class="fa-solid fa-chalkboard-user icon"></i><span>Cursos</span></a></li>
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Header -->
+      {% include 'includes/header.html' %}
 
+      <!-- Aquí va el contenido de la página -->
+      <main>
+        <!-- === COURSE CARDS === -->
 
-            </ul>
-            <ul class="bottom-menu">
-                <li><a class="menu-option" href="#"><i class="fa-solid fa-question icon"></i><span>Soporte</span></a>
-                </li>
-                <li><a class="menu-option" href="#"><i class="fa-solid fa-gear icon"></i><span>Configuración</span></a>
-                </li>
-            </ul>
-        </div>
+        <div class="carousel-wrapper">
+          <div class="course-grid">
+            <div class="course-grid">
 
-
-        <!-- Main content -->
-        <div class="main-content">
-            <!-- Header -->
-            <div class="header">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass icon"></i>
-                    <input type="text" placeholder="Buscar..." />
-                </div>
-                <div class="header-right">
-                    <div class="avatar">
-                        <img src="https://motionbgs.com/media/4418/sung-jin-woo-darkness.jpg" alt="User" />
-                    </div>
-                </div>
-            </div>
-            <!-- Aquí va el contenido de la página -->
-            <main>
-                <!-- === COURSE CARDS === -->
-
-                <div class="carousel-wrapper">
-                    <div class="course-grid">
-                        <div class="course-grid">
-                            <!-- Card 1 -->
-                            <div class="course-card">
-                                <a href="course_detail.html">
-                                    <img src="{% static 'images/curso_1.jpg' %}" alt="Course Image" class="course-img" />
-                                    <div class="course-info">
-                                        <div class="course-rating">
-                                            <span class="tag beginner">Beginner</span>
-                                            <div class="course-meta">
-                                                <span><i class="fa-solid fa-star"></i> 5.0</span>
-                                            </div>
-                                        </div>
-
-                                        <h3 class="course-title">Three-month Course to Learn the Basics of Python and
-                                            Start
-                                            Coding.
-                                        </h3>
-                                        <div class="author"><img src="https://randomuser.me/api/portraits/women/68.jpg"
-                                                alt=""><span>Alison Walsh</span></div>
-                                    </div>
-
-                                </a>
-                            </div>
-
-                            <!-- Card 2 -->
-                            <div class="course-card">
-                                <a href="course_detail.html">
-                                    <img src="{% static 'images/curso_2.jpg' %}" alt="Course Image" class="course-img" />
-                                    <div class="course-info">
-                                        <div class="course-rating">
-                                            <span class="tag beginner">Beginner</span>
-                                            <div class="course-meta">
-                                                <span><i class="fa-solid fa-star"></i> 5.0</span>
-                                            </div>
-                                        </div>
-                                        <h3 class="course-title">Beginner's Guide to Successful Company Management:
-                                            Business
-                                            And
-                                            More</h3>
-                                        <div class="author"><img src="https://randomuser.me/api/portraits/women/20.jpg"
-                                                alt=""><span>Patty Kutch</span></div>
-                                    </div>
-
-                                </a>
-                            </div>
-
-                            <!-- Card 3 -->
-                            <div class="course-card">
-                                <a href="course_detail.html">
-                                    <img src="{% static 'images/curso_3.jpg' %}" alt="Course Image" class="course-img" />
-                                    <div class="course-info">
-                                        <div class="course-rating">
-                                            <span class="tag beginner">Beginner</span>
-                                            <div class="course-meta">
-                                                <span><i class="fa-solid fa-star"></i> 5.0</span>
-                                            </div>
-                                        </div>
-                                        <h3 class="course-title">A Fascinating Theory of Probability. Practice.
-                                            Application.
-                                            How to
-                                            Outplay...</h3>
-                                        <div class="author"><img src="https://randomuser.me/api/portraits/men/32.jpg"
-                                                alt=""><span>Alonzo Murray</span></div>
-
-
-                                    </div>
-
-                                </a>
-                            </div>
-
-                            <!-- Card 4 -->
-                            <div class="course-card">
-                                <a href="course_detail.html">
-                                    <img src="{% static 'images/curso_2.jpg' %}" alt="Course Image" class="course-img" />
-                                    <div class="course-info">
-                                        <div class="course-rating">
-                                            <span class="tag beginner">Beginner</span>
-                                            <div class="course-meta">
-                                                <span><i class="fa-solid fa-star"></i> 5.0</span>
-                                            </div>
-                                        </div>
-                                        <h3 class="course-title">Introduction: Machine Learning and LLM. Implementation
-                                            in
-                                            Modern
-                                            Software</h3>
-                                        <div class="author"><img src="https://randomuser.me/api/portraits/men/45.jpg"
-                                                alt=""><span>Gregory Harris</span></div>
-                                    </div>
-
-                                </a>
-                            </div>
+              {% for course in courses %}
+                <div class="course-card">
+                  <a href="{% url 'course_detail' %}">
+                    <img src="{{ course.course_image }}" alt="Course Image" class="course-img" />
+                    <div class="course-info">
+                      <div class="course-rating">
+                        <span class="tag beginner">{{ course.level }}</span>
+                        <div class="course-meta">
+                          <span><i class="fa-solid fa-star"></i>{{ course.rating }}</span>
                         </div>
+                      </div>
+
+                      <h3 class="course-title">{{ course.course_title }}</h3>
+                      <div class="author">
+                        <img src="{{ course.instructor_image }}" alt="" /><span>{{ course.instructor }}</span>
+                      </div>
                     </div>
+                  </a>
                 </div>
+              {% endfor %}
+              <!-- Card 1 -->
 
-            </main>
+              <!-- Card 2 -->
+
+              <!-- Card 3 -->
+
+              <!-- Card 4 -->
+            </div>
+          </div>
         </div>
+      </main>
     </div>
-
-{% endblock content %}
+  </div>
+{% endblock %}
 
 {% block scripts %}
-<script src="{% static 'js/script.js' %}"></script>
-{% endblock scripts %}
+  <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
