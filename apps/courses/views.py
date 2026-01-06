@@ -49,8 +49,74 @@ def course_list(request):
 
 
 def course_detail(request):
-    return render(request, 'courses/course_detail.html')
+    course = {
+        'course_title': 'JavaScript: fundamentos',
+        'course_link': 'course_lessons',
+        'course_author': 'https://makerworld.bblmw.com/makerworld/model/US28861ea471fdca/design/2024-01-06_a1b1fb2777cf3.jpg?x-oss-process=image/resize,w_1000/format,webp',
+        'course_banner': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT5cEj8YHGfoQpSpubw5dWhd3_m_XJHHgDjg&s',
+        'info_course': {
+            'lessons': 79,
+            'duration': 8,
+            'instructor': 'Ricardo Doe'
+        },
+        'course_content': [
+            {
+                'id': 1,
+                'name': 'Introducción al curso',
+                'lessons': [
+                    {
+                        'name': '¿Qué aprenderás en este curso?',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Como usar la plataforma?',
+                        'type': 'article'
+                    }
+                ]
+            },
+            {
+                'id': 2,
+                'name': 'El Sistema de Cazadores y Rangos',
+                'lessons': [
+                    {
+                        'name': 'Clasificación de Gremios y Rangos (E a S)',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Anatomía de una Mazmorra: Portales y Jefes',
+                        'type': 'article'
+                    },
+                    {
+                        'name': 'Reglas de supervivencia en una Double Dungeon',
+                        'type': 'video'
+                    }
+                ]
+            },
+            {
+                'id': 3,
+                'name': 'El Camino del Monarca de las Sombras',
+                'lessons': [
+                    {
+                        'name': 'Misiones diarias: El secreto de la fuerza de Jin-woo',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Extracción de Sombras: ¡Levántate!',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Gestión del inventario y puntos de habilidad',
+                        'type': 'article'
+                    }
+                ]
+            }
+        ]
+
+    }
+
+    return render(request, 'courses/course_detail.html', {'course': course})
+
 
 
 def course_lessons(request):
-    return render(request,'courses/course_lessons.html')
+    return render(request, 'courses/course_lessons.html')
