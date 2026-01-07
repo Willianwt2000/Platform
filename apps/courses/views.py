@@ -117,6 +117,71 @@ def course_detail(request):
     return render(request, 'courses/course_detail.html', {'course': course})
 
 
-
 def course_lessons(request):
-    return render(request, 'courses/course_lessons.html')
+    lesson = {
+        'course_title': 'Django Aplicaciones',
+        'progress': 30,
+        'course_content': [
+            {
+                'id': 1,
+                'name': 'Introducción al curso',
+                'total_lessons': 6,
+                'complete_lessons': 3,
+                'lessons': [
+                    {
+                        'name': '¿Qué aprenderás en este curso?',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Como usar la plataforma?',
+                        'type': 'article'
+                    }
+                ]
+            },
+            {
+                'id': 2,
+                'name': 'El Sistema de Cazadores y Rangos',
+                'total_lessons': 8,
+                'complete_lessons': 3,
+                'lessons': [
+                    {
+                        'name': 'Clasificación de Gremios y Rangos (E a S)',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Anatomía de una Mazmorra: Portales y Jefes',
+                        'type': 'article'
+                    },
+                    {
+                        'name': 'Reglas de supervivencia en una Double Dungeon',
+                        'type': 'video'
+                    }
+                ]
+            },
+            {
+                'id': 3,
+                'name': 'El Camino del Monarca de las Sombras',
+                'total_lessons': 4,
+                'complete_lessons': 3,
+                'lessons': [
+                    {
+                        'name': 'Misiones diarias: El secreto de la fuerza de Jin-woo',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Extracción de Sombras: ¡Levántate!',
+                        'type': 'video'
+                    },
+                    {
+                        'name': 'Gestión del inventario y puntos de habilidad',
+                        'type': 'article'
+                    }
+                ]
+            }
+        ]
+
+    }
+
+    return render(request, 'courses/course_lessons.html', {
+        'lesson': lesson
+    })

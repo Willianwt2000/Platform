@@ -2,56 +2,54 @@
 {% load static %}
 {% block title %}
   Todas las lecciones
-{% endblock %}
+{% endblock title%}
+{% block body_class %}lessons-page{% endblock body_class %}
 {% block custom_styles %}
-  <link rel="stylesheet" href="{% static 'css/lessons.css' %}" />
-{% endblock %}
+   <link rel="stylesheet" href="{% static 'css/lessons.css' %}">
+{% endblock custom_styles%}
 {% block content %}
     <!-- HEADER SUPERIOR -->
     <header class="topbar">
         <div class="acciones">
             <div class="back-link"> <button class="discusiones">← Ve al panel de control</button></div>
-
+            
         </div>
         <div class="logo"><img src="{% static 'images/devilearn.png' %}" alt="Logo devilearn"></div>
     </header>
-
+    
     <!-- LAYOUT PRINCIPAL -->
     <div class="layout">
         <!-- SIDEBAR IZQUIERDA -->
         <aside class="sidebar">
-
-
-            <h1 class="course-title">Django: Crea aplicaciones web robustas con Python</h1>
-            <p class="progress">0% completado</p>
-
+            
+            
+            <h1 class="course-title">{{ lesson.course_title }}</h1>
+            <p class="progress">{{ lesson.progress }}% completado</p>
+            
+            {% comment %} {{lesson}} {% endcomment %}
 
             <input class="lesson-search" placeholder="Buscar...">
-            <option>Buscar por título de lección</option>
+            <select class="lesson-filter">
+                <option>Buscar por título de lección</option>
+            </select>
             
             <!-- SECCIONES -->
             <div class="accordion">
+                {% for section in lesson.course_content %}
                 <div class="accordion-item">
-                    <button class="accordion-header">Sección 1: Introducción al curso <span>0 / 6</span></button>
+                    <button class="accordion-header">
+                        Sección {{ section.id }}: {{ section.name }}
+                        <span>{{ section.complete_lessons }} / {{ section.total_lessons }}</span>
+                    </button>
                     <div class="accordion-content">
                         <ul>
-                            <li>Bienvenida</li>
-                            <li>¿Qué aprenderás?</li>
-                            <li>Requisitos del curso</li>
+                            {% for item in section.lessons %}
+                            <li>{{ item.name }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-header">Sección 2: Fundamentos necesarios de Python <span>0 /
-                            27</span></button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Variables</li>
-                            <li>Condicionales</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Agrega más secciones si deseas -->
+                {% endfor %}
             </div>
         </aside>
 
@@ -70,8 +68,8 @@
             </div>
         </main>
     </div>
-{% endblock %}
+{% endblock content%}
 
 {% block scripts %}
   <script src="{% static 'js/multimedia.js' %}"></script>
-{% endblock %}
+{% endblock scripts%}

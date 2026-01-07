@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.dashboard',
+    'apps.profiles',
     'apps.courses',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -120,4 +122,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+
 ]

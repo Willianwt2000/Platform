@@ -8,6 +8,46 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
+body.lessons-page {
+    background: #ffffff;
+    color: #1e1e1e;
+}
+
+body.lessons-page .layout {
+    height: auto;
+}
+
+body.lessons-page .sidebar {
+    display: block;
+    height: auto;
+    color: #1e1e1e;
+    background: #efefef;
+    flex-direction: initial;
+    justify-content: initial;
+    transition: none;
+    overflow: auto;
+}
+
+body.lessons-page .sidebar:hover {
+    width: 300px;
+}
+
+body.lessons-page .logo {
+    display: block;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body.lessons-page .logo img {
+    width: auto;
+    height: auto;
+}
+
+body.lessons-page .main-content {
+    background: transparent;
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -22,9 +62,9 @@ body {
     text-align: right;
 }
 
-.topbar .logo img {
+/* .topbar .logo img {
     width: 40%;
-}
+} */
 
 .topbar .acciones button {
     background: transparent;
