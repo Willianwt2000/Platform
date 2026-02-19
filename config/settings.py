@@ -124,3 +124,6 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 
 ]
+
+
+AUTH_USER_MODEL = 'profiles.User'
