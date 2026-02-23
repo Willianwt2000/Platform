@@ -4,7 +4,7 @@ from django.conf import settings
 class Instructor(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
-    photo = models.URLfield(blank=True, null=True)
+    photo = models.URLField(blank=True, null=True)
     website = models.URLField(blank=True, null=True)
     linkedin = models.URLField(blank=True, null=True)
     social_networks = models.URLField(blank=True, null=True)
