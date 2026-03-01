@@ -1,0 +1,538 @@
+[
+{
+  "model": "courses.category",
+  "pk": 2,
+  "fields": {
+    "name": "Web Development",
+    "slug": "web-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 3,
+  "fields": {
+    "name": "Software Development",
+    "slug": "software-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 4,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 5,
+  "fields": {
+    "name": "Typescript",
+    "slug": "typescript"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 6,
+  "fields": {
+    "name": "Django",
+    "slug": "django"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 7,
+  "fields": {
+    "name": "JavaScript",
+    "slug": "javascript"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 8,
+  "fields": {
+    "name": "Backend Development",
+    "slug": "backend-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 9,
+  "fields": {
+    "name": "Frontend Development",
+    "slug": "frontend-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 10,
+  "fields": {
+    "name": "Database Design",
+    "slug": "database-design"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 11,
+  "fields": {
+    "name": "PostgreSQL",
+    "slug": "postgresql"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 12,
+  "fields": {
+    "name": "REST APIs",
+    "slug": "rest-apis"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 13,
+  "fields": {
+    "name": "Node.js",
+    "slug": "nodejs"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 14,
+  "fields": {
+    "name": "DevOps",
+    "slug": "devops"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 15,
+  "fields": {
+    "name": "Docker",
+    "slug": "docker"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 16,
+  "fields": {
+    "name": "Data Structures",
+    "slug": "data-structures"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 17,
+  "fields": {
+    "name": "Algorithms",
+    "slug": "algorithms"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 18,
+  "fields": {
+    "name": "Machine Learning",
+    "slug": "machine-learning"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 19,
+  "fields": {
+    "name": "React",
+    "slug": "react"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 20,
+  "fields": {
+    "name": "Angular",
+    "slug": "angular"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 21,
+  "fields": {
+    "name": "Vue.js",
+    "slug": "vuejs"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 22,
+  "fields": {
+    "name": "Next.js",
+    "slug": "nextjs"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 23,
+  "fields": {
+    "name": "Express.js",
+    "slug": "expressjs"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 24,
+  "fields": {
+    "name": "NestJS",
+    "slug": "nestjs"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 25,
+  "fields": {
+    "name": "Flask",
+    "slug": "flask"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 26,
+  "fields": {
+    "name": "FastAPI",
+    "slug": "fastapi"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 27,
+  "fields": {
+    "name": "GraphQL",
+    "slug": "graphql"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 28,
+  "fields": {
+    "name": "Microservices",
+    "slug": "microservices"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 29,
+  "fields": {
+    "name": "System Design",
+    "slug": "system-design"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 30,
+  "fields": {
+    "name": "Linux",
+    "slug": "linux"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 31,
+  "fields": {
+    "name": "Git",
+    "slug": "git"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 32,
+  "fields": {
+    "name": "GitHub",
+    "slug": "github"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 33,
+  "fields": {
+    "name": "CI/CD",
+    "slug": "cicd"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 34,
+  "fields": {
+    "name": "Testing",
+    "slug": "testing"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 35,
+  "fields": {
+    "name": "Unit Testing",
+    "slug": "unit-testing"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 36,
+  "fields": {
+    "name": "Integration Testing",
+    "slug": "integration-testing"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 37,
+  "fields": {
+    "name": "Cybersecurity",
+    "slug": "cybersecurity"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 38,
+  "fields": {
+    "name": "Ethical Hacking",
+    "slug": "ethical-hacking"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 39,
+  "fields": {
+    "name": "Cloud Computing",
+    "slug": "cloud-computing"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 40,
+  "fields": {
+    "name": "AWS",
+    "slug": "aws"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 41,
+  "fields": {
+    "name": "Google Cloud",
+    "slug": "google-cloud"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 42,
+  "fields": {
+    "name": "Azure",
+    "slug": "azure"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 43,
+  "fields": {
+    "name": "Data Science",
+    "slug": "data-science"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 44,
+  "fields": {
+    "name": "Data Analysis",
+    "slug": "data-analysis"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 45,
+  "fields": {
+    "name": "Pandas",
+    "slug": "pandas"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 46,
+  "fields": {
+    "name": "NumPy",
+    "slug": "numpy"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 47,
+  "fields": {
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 48,
+  "fields": {
+    "name": "Deep Learning",
+    "slug": "deep-learning"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 49,
+  "fields": {
+    "name": "Computer Vision",
+    "slug": "computer-vision"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 50,
+  "fields": {
+    "name": "Natural Language Processing",
+    "slug": "nlp"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 51,
+  "fields": {
+    "name": "Mobile Development",
+    "slug": "mobile-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 52,
+  "fields": {
+    "name": "Android Development",
+    "slug": "android-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 53,
+  "fields": {
+    "name": "iOS Development",
+    "slug": "ios-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 54,
+  "fields": {
+    "name": "Flutter",
+    "slug": "flutter"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 55,
+  "fields": {
+    "name": "React Native",
+    "slug": "react-native"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 56,
+  "fields": {
+    "name": "Software Architecture",
+    "slug": "software-architecture"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 57,
+  "fields": {
+    "name": "Clean Code",
+    "slug": "clean-code"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 58,
+  "fields": {
+    "name": "Design Patterns",
+    "slug": "design-patterns"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 59,
+  "fields": {
+    "name": "Object Oriented Programming",
+    "slug": "oop"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 60,
+  "fields": {
+    "name": "Functional Programming",
+    "slug": "functional-programming"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 61,
+  "fields": {
+    "name": "Blockchain",
+    "slug": "blockchain"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 62,
+  "fields": {
+    "name": "Web3",
+    "slug": "web3"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 63,
+  "fields": {
+    "name": "Game Development",
+    "slug": "game-development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 64,
+  "fields": {
+    "name": "Unity",
+    "slug": "unity"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 65,
+  "fields": {
+    "name": "Unreal Engine",
+    "slug": "unreal-engine"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 66,
+  "fields": {
+    "name": "Automation",
+    "slug": "automation"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 67,
+  "fields": {
+    "name": "Web Scraping",
+    "slug": "web-scraping"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 68,
+  "fields": {
+    "name": "ETL Processes",
+    "slug": "etl-processes"
+  }
+}
+]
