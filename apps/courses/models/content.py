@@ -5,7 +5,7 @@ from django.contrib.contenttypes.models import ContentType
 
 
 
-
+# Create your models here.
 class Content(models.Model):
     module = models.ForeignKey(Module, related_name='contents', on_delete=models.CASCADE)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
