@@ -13,7 +13,6 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ('username', 'email')
     list_filter = ('is_instructor', 'is_staff', 'is_active')
 
-# continuara
 
 @admin.register(Instructor)
 class InstructorAdmin(admin.ModelAdmin):
