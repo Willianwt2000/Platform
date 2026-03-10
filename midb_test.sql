@@ -1053,3 +1053,50 @@
 
 
 SELECT * FROM users;
+
+SELECT first_name,last_name, last_connection FROM users WHERE last_connection LIKE '221%' order by id DESC;
+
+
+-- SELECT
+--     first_name,
+--     last_name,
+--     followers
+-- from
+--     users
+-- where
+-- --     followers >= 4600
+-- --     and followers <= 4700
+-- 	followers BETWEEN 4600 and 4700
+-- order by
+--     followers ASC;
+
+
+-- * Funciones agregadas
+
+-- SELECT
+--     COUNT(*) AS total_users,
+--     MIN(followers) as min_followers,
+--     MAX(followers) as max_followers,
+--     ROUND(AVG(followers)) as avg_followers_redondeado,
+--     AVG(followers) as avg_followers,
+--     SUM(followers) / count(*) as avg_manual
+-- FROM
+--     users;
+
+
+
+-- * Group by
+
+SELECT count(*),followers
+    FROM users
+WHERE followers = 4 OR followers = 4999
+    GROUP BY followers
+    ORDER BY followers DESC
+
+
+
+-- 
+
+
+
+select * from users  BETWEEN 2 and 5;
