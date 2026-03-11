@@ -1094,9 +1094,3 @@ WHERE followers = 4 OR followers = 4999
     ORDER BY followers DESC
 
 
-
--- 
-
-
-
-select * from users  BETWEEN 2 and 5;
