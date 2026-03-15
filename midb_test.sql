@@ -151,3 +151,13 @@ select first_name,last_name, 'Empleado' as tipo  from staff
 ORDER BY tipo ASC
 -- fusionar las dos partes con el UNION operator
 
+SELECT * from rental
+SELECT CURRENT_TIMESTAMP;
+
+-- https://leetcode.com/problems/article-views-i/
+-- Write your PostgreSQL query statement below
+SELECT DISTINCT  author_id as id FROM Views where author_id = viewer_id ORDER BY id ASC;
+
+-- https://leetcode.com/problems/recyclable-and-low-fat-products/submissions/1943495779/
+-- # Write your MySQL query statement below
+select product_id from Products where low_fats = 'Y' and recyclable = 'Y';
