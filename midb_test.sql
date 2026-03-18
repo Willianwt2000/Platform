@@ -154,6 +154,7 @@ ORDER BY tipo ASC
 SELECT * from rental
 SELECT CURRENT_TIMESTAMP;
 
+-- Disctict Method
 -- https://leetcode.com/problems/article-views-i/
 -- Write your PostgreSQL query statement below
 SELECT DISTINCT  author_id as id FROM Views where author_id = viewer_id ORDER BY id ASC;
@@ -161,3 +162,11 @@ SELECT DISTINCT  author_id as id FROM Views where author_id = viewer_id ORDER BY
 -- https://leetcode.com/problems/recyclable-and-low-fat-products/submissions/1943495779/
 -- # Write your MySQL query statement below
 select product_id from Products where low_fats = 'Y' and recyclable = 'Y';
+
+
+
+-- LENGTH() Method
+-- Write your PostgreSQL query statement below
+SELECT tweet_id
+from Tweets
+where length (content) >15;
