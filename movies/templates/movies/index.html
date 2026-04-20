@@ -1,12 +1,25 @@
 
 
-{% if latest_actors_list %}
+{% comment %} {% if latest_actors_list %}
     <ul>
     {% for actor in latest_actors_list %}
-        <li><a href="/movies/{{ actor.actor_id }}/">{{ actor.first_name }} {{ actor.last_name }}</a></li>
+        <li><a href="{% url 'actor:detail' actor.actor_id %}">{{ actor.first_name }} {{ actor.last_name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No actors are available.</p>
-{% endif %}
+{% endif %} {% endcomment %}
 
+<form action="{% url 'actor:vote' 1 %}" method="post"> {% csrf_token %}
+<fieldset>
+    <legend><h1>Películas de {{ latest_actors_list.0.first_name }}</h1></legend>
+    
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    {% for film in latest_actors_list.0.films.all %}
+        <input type="radio" name="film" id="film{{ forloop.counter }}" value="{{ film.id }}">
+        <label for="film{{ forloop.counter }}">{{ film.title }}</label><br>
+    {% endfor %}
+</fieldset>
+<input type="submit" value="Votar por película">
+</form>

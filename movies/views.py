@@ -14,10 +14,12 @@ def results(request, question_id):
     return HttpResponse(response % question_id)
 
 
-def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)   #http://127.0.0.1:8000/movies/5/vote/
+# def vote(request, question_id):
+#     return HttpResponse("You're voting on question %s." % question_id)   #http://127.0.0.1:8000/movies/5/vote/
 
 
+def vote(request, film_id):
+    return HttpResponse("Estás votando por la película con ID %s." % film_id)
 
 # Actor
 def actor(request):
