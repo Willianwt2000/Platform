@@ -37,3 +37,55 @@ finally:
         cursor.close()
     if 'connection' in locals():
         connection.close()
+
+
+
+
+
+
+
+# -- * Using the interval Data Type in Calculations
+
+# SELECT
+#     timestamp_column
+#     interval_column,
+# timestamp_column - interval_column AS new_date
+# FROM date_time_types;
+
+
+
+# CREATE TABLE  test_numbers (
+#     number_one INT,
+#     number_two INT
+# )
+
+
+# INSERT INTO test_numbers (
+#     VALUES
+#     (6,4)
+# )
+
+# SELECT number_one,number_two , number_one + number_two AS number_result FROM test_numbers
+
+
+# SELECT timestamp_column, CAST(timestamp_column AS varchar(10))
+# FROM date_time_types;
+
+
+# SELECT numeric_column,
+#     CAST(numeric_column AS integer),
+#     CAST(numeric_column AS varchar(6))
+# FROM number_data_types;
+
+
+# SELECT CAST(char_column AS integer) FROM char_data_types;
+
+
+
+# SELECT timestamp_column, CAST(timestamp_column AS varchar(10))
+# FROM date_time_types;
+
+# SELECT timestamp_column::varchar(10)
+# FROM date_time_types;
+
+
