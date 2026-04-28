@@ -218,3 +218,35 @@ CREATE TEMPORARY TABLE supervisor_salaries_temp (LIKE supervisor_salaries);
 DROP TABLE us_counties_2010;
 
 /home/enigma_wt/practical-sql/Chapter_04/us_counties_2010.csv
+
+
+DROP TABLE us_counties_2010;
+
+-- /home/enigma_wt/practical-sql/Chapter_04/us_counties_2010.csv
+
+COPY us_counties_2010
+TO "/home/enigma_wt/Documents/test_file | us_counties_2010_export.txt"
+WITH(FORMAT CSV, HEADER, DELIMITER'|');
+
+COPY us_counties_2010 (geo_name, internal_point_lat, internal_point_lon)
+TO 'C:\YourDirectory\us_counties_latlon_export.txt'
+WITH (FORMAT CSV, HEADER, DELIMITER '|');
+
+-- psql -h localhost -p 5432 -U student -d analysis -c  TO "/home/enigma_wt/Documents/test_file | us_counties_2010_export.txt"
+
+
+
+psql -h localhost -p 5432 -U student -d analysis -c 
+"\copy (
+SELECT name, state
+FROM us_counties_2010
+WHERE name ILIKE '%mill%'
+) TO '/home/enigma_wt/Documents/test_file/us_counties_mill_export.txt' WITH CSV HEADER DELIMITER '|';"
+
+
+
+
+
+
+
+
